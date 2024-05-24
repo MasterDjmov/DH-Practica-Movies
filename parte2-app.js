@@ -5,7 +5,10 @@ const ListadoDePeliculas = {
     peliculas: listadoPeliculas,
     //punto 1
     listMovies: function(){
-
+        let devolverListado = this.peliculas.map((pelicula)=>{
+            return pelicula;
+        });
+        return devolverListado;    
     },
     //punto 2
     searchMovie: function(){
@@ -28,7 +31,7 @@ const ListadoDePeliculas = {
 /**
  *1- Ahora que el objeto literal moviesDH tiene todas las películas, es posible crear la funcionalidad listMovies. Esta tendrá la responsabilidad de retornar el listado de todas las películas existentes. Puedes utilizar cualquier método para recorrer los arrays, que desees. Para probar que la funcionalidad está correcta debes utilizar el comando que nos permite imprimir los resultados en nuestra terminal.
  */
-
+console.table(ListadoDePeliculas.listMovies());
  /**
   *2 - Crear la funcionalidad searchMovie que debe recibir por parámetro un id ó un title de la película. La responsabilidad de esta función será la de mostrar el detalle de alguna de las películas registradas en nuestro módulo movies, si la película no es encontrada entonces la función debe devolver null.
   */
